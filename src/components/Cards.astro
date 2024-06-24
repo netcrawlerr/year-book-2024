@@ -1,0 +1,123 @@
+---
+const data = [
+  {
+    fname: 'Mejid',
+    lname: "Netcrawler",
+    lastword: "I hate the way that u walk the way that you talk they way that you sneak diss if i catch flight it's gonna be direct it's gonna be direct",
+    photo: '../public/bg.jpeg',
+  },
+  {
+    fname: 'Dave',
+    lname: "Woy yoy",
+    lastword: "Show me your Splits",
+    photo: '../public/bg.jpeg',
+  }, {
+    fname: 'Eyoas',
+    lname: "Woy yoy",
+    lastword: "SAKA Over Arsenal",
+    photo: '../public/bg.jpeg',
+  }, {
+    fname: 'Eyob',
+    lname: "Dula",
+    lastword: "Wow You Can Really Dance !",
+    photo: '../public/eyob.jpg',
+  }, {
+    fname: 'Dave',
+    lname: "Woy yoy",
+    lastword: "Show me your Splits",
+    photo: '../public/bg.jpeg',
+  }, {
+    fname: 'Dave',
+    lname: "Woy yoy",
+    lastword: "Show me your Splits",
+    photo: '../public/bg.jpeg',
+  },
+]
+---
+
+<style>
+  .responsive-container-block {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Fixed width for all cards */
+    min-height: 300px; /* Minimum height to ensure consistent size */
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .name-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .name {
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(51, 51, 51);
+    margin: 0;
+  }
+
+  .position {
+    font-size: 18px;
+    color: rgb(51, 51, 51);
+    margin: 0;
+  }
+
+  .lastword {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+
+  .photo {
+    margin-left: auto; /* Move the image to the right */
+  }
+
+  .photo img {
+    border-radius: 50%;
+    width: 150px; /* Adjust image size */
+    height: 150px; /* Adjust image size */
+    object-fit: cover;
+    margin-top: 20px
+  }
+
+  .quote-svg {
+    width: 35px;
+    height: auto;
+  }
+</style>
+
+<div class="responsive-container-block">
+  {data.map((item, index) => (
+    <div class="card">
+      <img class="quote-svg" src="/quote.svg" alt="Quote Icon" />
+      <p class="lastword">{item.lastword}</p>
+      <div class="name-container">
+        <div>
+          <p class="name">{item.fname}</p>
+          <p class="position">{item.lname}</p>
+        </div>
+        <div class="photo">
+          <img src={item.photo} alt={`Photo of ${item.fname}`} />
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
