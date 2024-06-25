@@ -65,14 +65,14 @@ const data = [
     fname: 'Kenhirian',
     lname: "Kenji",
     lastword: "Everyday MILFs be testing me Ah !",
-    photo: '../public/kenji-min.jpg',
+    photo: 'kenji-min.jpg',
   },
   {
     id:8,
     fname: 'Nuredin',
     lname: "Nura",
     lastword: "I do Snaps For A living!",
-    photo: '../public/nura-min.jpg',
+    photo: 'nura-min.jpg',
   },
   {
     id:9,
@@ -182,7 +182,7 @@ const data = [
           <p class="position">{item.lname}</p>
         </div>
         <div class="photo">
-          <img src={item.photo} alt={`Photo of ${item.fname}`} />
+          <img src={`public/${item.photo}`} alt={`Photo of ${item.fname}`} />
         </div>
       </div>
     </div>
